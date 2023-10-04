@@ -38,8 +38,8 @@
     
     grid-template-areas: 
         "header header header"
-        "item1 item2 item3"
-        "item1 footer1 footer2";
+        "item1 item1 item3"
+        "item2 footer1 footer2";
 }
 
 ul { 
@@ -55,7 +55,7 @@ ul {
 
   .sarasas{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
   }
   
 
