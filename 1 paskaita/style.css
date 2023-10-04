@@ -1,0 +1,64 @@
+li {
+    color: #0f0;
+}
+
+ul.menu{
+    list-style: none;
+}
+
+ul.menu li{
+    display: inline-block;
+}
+
+ul.menu li a{
+    text-decoration: none;
+    border: 1px solid #aaa ;
+    margin: 10px;
+    padding: 10px;
+}
+
+ul.menu li a:hover{
+
+    background-color: #eee;
+    border-color: #000;
+}
+ul.menu li a:active{
+    background-color: #0f0;
+    border-color: #000;
+}
+ 
+
+
+.blocks div{
+    border: 1px solid #000;
+    width: 150px;
+    height: 150px;
+    float: left;
+   
+}
+
+
+
+@media screen and (max-width:300px) {
+    .blocks div{
+        background-color: #f00;
+    }
+}
+
+@media screen and (min-width:300px) {
+    .blocks div{
+        background-color: #f0f;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .blocks div{
+        background-color: #00f;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .blocks div{
+        background-color: #0f0;
+    }
+}
