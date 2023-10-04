@@ -52,6 +52,11 @@ ul {
     display: block;
     margin: 1em;
   }
+
+  .sarasas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   
 
 @media only screen and (max-width:800px) {
