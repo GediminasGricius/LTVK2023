@@ -33,11 +33,26 @@
     display: grid;
     grid-template-columns: 300px 1fr 1fr;
     grid-template-rows: 100px 400px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    
     grid-template-areas: 
         "header header header"
         "item1 item2 item3"
-        "footer1 footer1 footer2";
+        "item1 footer1 footer2";
 }
+
+ul { 
+    padding: 0; 
+  }
+  
+  li {
+    background-color: white;
+    padding: 1em;
+    display: block;
+    margin: 1em;
+  }
+  
 
 @media only screen and (max-width:800px) {
     .conteiner{
