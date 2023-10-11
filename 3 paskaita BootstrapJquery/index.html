@@ -5,26 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+
 </head>
 <body>
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-6">
-
-                
-
-                
                 <div class="card">
                     <div class="card-header">Atstumų keitiklis</div>
                     <div class="card-body">
                         <div class="mb-3">
-                            <label for="dydus_centimetrais" class="form-label">Dydis centimetrais</label>
-                            <input id="dydus_centimetrais" type="number" class="form-control" placeholder="Įveskite dydį centimetrais">
+                            <label for="dydis_centimetrais" class="form-label">Dydis centimetrais</label>
+                            <input id="dydis_centimetrais" type="number" class="form-control" placeholder="Įveskite dydį centimetrais">
                         </div>
-                        <button class="btn btn-success">Skaičiuoti</button>
+                        <button id="skaiciuoti" class="btn btn-success">Skaičiuoti</button>
                     </div>
                 </div>
-
             </div>
             <div class="col-md-6">
                 <div class="card">
@@ -32,7 +29,7 @@
                         Rezultatas
                     </div>
                     <div class="card-body">
-                        <div>
+                        <div id="rezultatas">
                             Įveskite atstumą centimetrais ir paspauskite skaičiuoti
                         </div>
                     </div>
@@ -42,5 +39,25 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#skaiciuoti").click(function(){
+                let cm= $("#dydis_centimetrais").val();
+                if (cm==""){
+                    $("#rezultatas").html("<div class='alert alert-danger'>Įveskite teisingus duomenis</div> ");
+                }else{
+                    let inc=(cm / 2.54).toFixed(2);
+                    $("#rezultatas").html("Atstumas coliais: "+inc);
+                    $("#dydis_centimetrais").val("");
+                }
+                
+            });
+
+
+           
+        });
+    </script>
 </body>
 </html>
