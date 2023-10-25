@@ -13,26 +13,24 @@
         <div class="row mt-5">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header">Atstumų keitiklis</div>
+                    <div class="card-header">Užduoties pridėjimas</div>
                     <div class="card-body">
                         <div class="mb-3">
-                            <label for="dydis_centimetrais" class="form-label">Dydis centimetrais</label>
-                            <input id="dydis_centimetrais" type="number" class="form-control" placeholder="Įveskite dydį centimetrais">
+                            <label for="uzduotis" class="form-label">Užduotis</label>
+                            <input id="uzduotis" type="text" class="form-control" placeholder="Įveskite užduoties pavadinimą">
                         </div>
-                        <button id="skaiciuoti" class="btn btn-success">Skaičiuoti</button>
+                        <button id="prideti" class="btn btn-success">Pridėti</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        Rezultatas
+                        Užduočių sąrašas
                     </div>
-                    <div class="card-body">
-                        <div id="rezultatas">
-                            Įveskite atstumą centimetrais ir paspauskite skaičiuoti
-                        </div>
-                    </div>
+                    <ul class="list-group">
+                      
+                    </ul>
                 </div>
             </div>
         </div>
@@ -43,16 +41,7 @@
     <script>
         $(document).ready(function(){
 
-            $("#skaiciuoti").click(function(){
-                let cm= $("#dydis_centimetrais").val();
-                if (cm==""){
-                    $("#rezultatas").html("<div class='alert alert-danger'>Įveskite teisingus duomenis</div> ");
-                }else{
-                    let inc=(cm / 2.54).toFixed(2);
-                    $("#rezultatas").html("Atstumas coliais: "+inc);
-                    $("#dydis_centimetrais").val("");
-                }
-            });
+          
         });
     </script>
 </body>
